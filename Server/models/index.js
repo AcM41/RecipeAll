@@ -16,7 +16,7 @@ const db = {};
 //   sequelize = new Sequelize(config.database, config.username, config.password, config);
 // }
 
-const sequelize = new Sequelize(`${config.url}?sslmode=no-verify`,config)
+const sequelize = new Sequelize(`${config.url}?ssl=true`,config)
 
 fs
   .readdirSync(__dirname)
