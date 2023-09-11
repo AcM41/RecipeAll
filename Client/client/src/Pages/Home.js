@@ -8,14 +8,14 @@ const Home = () => {
         const [listOfProducts,setListOfProducts] = useState([])
         const { authState } = useContext(AuthContext);
         useEffect(()=>{ 
-            axios.get("http://localhost:3001/products").then((response)=>{
+            axios.get("https://recipe-all.onrender.com/products").then((response)=>{
                 console.log(response.data)
             setListOfProducts(response.data)
             
             })},[])
         let navigate = useNavigate()
         const likeProduct=(productId)=>{
-            axios.post("http://localhost:3001/like",{ProductId:productId},
+            axios.post("https://recipe-all.onrender.com/like",{ProductId:productId},
             {headers:{accessToken:localStorage.getItem("accessToken")}}).then((res)=>{
                 
                 setListOfProducts(listOfProducts.map((product)=>{
@@ -36,7 +36,7 @@ const Home = () => {
             })
         }
         const deleteProduct=(productId)=>{
-            axios.delete(`http://localhost:3001/products/${productId}`, {
+            axios.delete(`https://recipe-all.onrender.com/products/${productId}`, {
             headers: { accessToken: localStorage.getItem("accessToken") },
         })
         .then(() => {

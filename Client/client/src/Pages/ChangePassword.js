@@ -5,7 +5,7 @@ const ChangePassword = () => {
     const [oldPwd,setOldPwd] = useState('')
     const [newPwd,setNewPwd] = useState('')
     const updatePassword =(oldPwd,newPwd)=>{
-        axios.put("http://localhost:3001/auth/updatePassword",{oldPwd:oldPwd,newPwd:newPwd},{headers: { accessToken: localStorage.getItem("accessToken") }})
+        axios.put("https://recipe-all.onrender.com/updatePassword",{oldPwd:oldPwd,newPwd:newPwd},{headers: { accessToken: localStorage.getItem("accessToken") }})
         .then((res)=>{  
             alert(res.data)
         })

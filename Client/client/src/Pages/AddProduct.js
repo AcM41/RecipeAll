@@ -17,7 +17,7 @@ const AddProduct = () => {
         const accessToken = localStorage.getItem("accessToken")
         if(!accessToken){alert('Please log in')}
         else{
-            axios.post('http://localhost:3001/products',data,{
+            axios.post('https://recipe-all.onrender.com/products',data,{
             headers:{
                 accessToken:localStorage.getItem("accessToken")
             }

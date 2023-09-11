@@ -13,24 +13,24 @@ const Profile = () => {
     const [listOfProducts,setListOfProducts] = useState([])
     useEffect(()=>{ 
         
-        axios.get("http://localhost:3001/products").then((response)=>{
+        axios.get("https://recipe-all.onrender.com/products").then((response)=>{
                 
             setListOfProducts(response.data)
             
             })
         const userId = authState.id
         console.log(userId)
-        axios.get(`http://localhost:3001/products/user/${userId}`,{headers:{accessToken:localStorage.getItem("accessToken")}}).then((response)=>{
+        axios.get(`https://recipe-all.onrender.com/products/user/${userId}`,{headers:{accessToken:localStorage.getItem("accessToken")}}).then((response)=>{
             
         setListOfMyProducts(response.data)
         
         })
-        axios.get(`http://localhost:3001/comments/user/${userId}`,{headers:{accessToken:localStorage.getItem("accessToken")}}).then((response)=>{
+        axios.get(`https://recipe-all.onrender.com/comments/user/${userId}`,{headers:{accessToken:localStorage.getItem("accessToken")}}).then((response)=>{
             console.log(response.data)
         setListOfMyComments(response.data)
         
         })
-        axios.get(`http://localhost:3001/like/user/${userId}`,{headers:{accessToken:localStorage.getItem("accessToken")}}).then((response)=>{
+        axios.get(`https://recipe-all.onrender.com/like/user/${userId}`,{headers:{accessToken:localStorage.getItem("accessToken")}}).then((response)=>{
             console.log(response.data)
             setListOfLikedProducts(response.data)
         

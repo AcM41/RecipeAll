@@ -17,7 +17,7 @@ function Registration() {
     });
 
     const onSubmit = (data) => {
-    axios.post("http://localhost:3001/auth", data).then(() => {
+    axios.post("https://recipe-all.onrender.com/auth", data).then(() => {
         console.log(data);
         navigate('/login')
     });

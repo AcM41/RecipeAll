@@ -12,16 +12,16 @@ const Product = () => {
     
     
     useEffect(()=>{
-        axios.get(`http://localhost:3001/products/id/${id}`).then((res)=>{
+        axios.get(`https://recipe-all.onrender.com/products/id/${id}`).then((res)=>{
             setProductObject(res.data)
         })
-        axios.get(`http://localhost:3001/comments/${id}`).then((res)=>{
+        axios.get(`https://recipe-all.onrender.com/comments/${id}`).then((res)=>{
             setCommentList(res.data)
         })
         
     },[])
     const addComment=()=>{
-        axios.post("http://localhost:3001/comments",{
+        axios.post("https://recipe-all.onrender.com/comments",{
             commentBody: comment,
             ProductId: id
         },{
@@ -41,7 +41,7 @@ const Product = () => {
         })
     }
     const deleteComment = (id) => {
-        axios.delete(`http://localhost:3001/comments/${id}`, {
+        axios.delete(`https://recipe-all.onrender.coms/comments/${id}`, {
             headers: { accessToken: localStorage.getItem("accessToken") },
         })
         .then(() => {
