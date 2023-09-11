@@ -24,7 +24,7 @@ function App() {
   });
 
   useEffect(()=>{
-    axios.get('http://localhost:3001/auth/validate',{
+    axios.get('https://recipe-all.onrender.com/auth/validate',{
       headers:{accessToken:localStorage.getItem('accessToken')}
     }).then((response)=>{
       if(response.data.error){
