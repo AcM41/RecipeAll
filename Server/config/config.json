@@ -1,10 +1,7 @@
 {
   "development": {
-    "username": "root",
-    "password": "11111111",
-    "database": "FullStack1",
-    "host": "localhost",
-    "dialect": "mysql"
+    "url":"postgres://recipe_all_user:Df6t4YOt7N6O8GkElK56OqCJlT6MI4yi@dpg-cjv8kq95mpss73ef8fs0-a.oregon-postgres.render.com/recipe_all",
+    "dialect": "postgres"
   },
   "test": {
     "username": "root",
