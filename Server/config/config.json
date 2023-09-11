@@ -5,17 +5,11 @@
   
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "url":"postgres://recipe_all_user:Df6t4YOt7N6O8GkElK56OqCJlT6MI4yi@dpg-cjv8kq95mpss73ef8fs0-a/recipe_all",
+    "dialect": "postgres"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "url":"postgres://recipe_all_user:Df6t4YOt7N6O8GkElK56OqCJlT6MI4yi@dpg-cjv8kq95mpss73ef8fs0-a/recipe_all",
+    "dialect": "postgres"
   }
 }
